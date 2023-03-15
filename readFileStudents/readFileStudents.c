@@ -56,14 +56,20 @@ int main(){
         averageStu[k] = ( (float)classP[k].midExam + classP[k].finalExam ) / 2 ;
         printf("|%10s||%8s||%8d||%8d||%11.1f|\n",classP[k].code, classP[k].name, classP[k].midExam, classP[k].finalExam,averageStu[k]);
     }
+
     float wholeAveStu = 0;
     float wholeStandDev = 0;
+
     for(int k=0; k<stuCount; k++)
     wholeAveStu += averageStu[k];
+
     wholeAveStu = wholeAveStu / stuCount ;
+
     for(int k=0; k<stuCount; k++)
     wholeStandDev = wholeStandDev + (pow(((float)averageStu[k]-wholeAveStu),2.0));
+
     wholeStandDev = sqrt(wholeStandDev / stuCount) ; 
+    
     printf("전체 평균은 : %0.2f , 표준편차는 : %0.2f", wholeAveStu, wholeStandDev);
     free(classP);
     return 0;
