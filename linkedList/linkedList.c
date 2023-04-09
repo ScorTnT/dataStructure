@@ -149,7 +149,6 @@ int delSet(){
         }
     }
     setCnt--;
-    printf("%d",setCnt);
     prtSets();
     return 0;
 }
