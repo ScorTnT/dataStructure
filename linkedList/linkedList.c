@@ -535,6 +535,7 @@ void RcomSet(){
         s=s->nextptr;
         t=p->SetHead;
     }
+    printf("SET A-B :");
     reComSet=HEAD;
     prtSet(reComSet);
 }
