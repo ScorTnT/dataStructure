@@ -84,7 +84,7 @@ StackList *push(StackList *S,int a, int b) {
 StackList* pop(StackList* S) {
     if (empty(S) == 1) {
         printf("Stack empty.\n");
-        return NULL;
+        return S;
     }
     StackList* p = S->down;
     free(S);
