@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#define MAX 10
 
 #define MEMSIZE 128
 #define BLOCKSIZE 4
@@ -28,6 +27,7 @@ void cacheS(int oper, char *ad,int a) {
     temp = 0;
     while (temp<CACHESIZE) {
         if (strcmp(CACHE[temp], ad)==0) {    //캐시에 존재할경우
+            cacheFlag = 1;
             printf("hit %d %s\n", oper,CACHE[temp]);
             LRU[temp] = 1;      //lru에 방금 접근했다고 알림
             exFlag = 1;         //존재flag 1로 변경
